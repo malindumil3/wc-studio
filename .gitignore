@@ -24,8 +24,6 @@
 .DS_Store
 *.pem
 
-# large media files
-*.mp4
 
 # debug
 npm-debug.log*

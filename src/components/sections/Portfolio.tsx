@@ -23,7 +23,7 @@ export default function Portfolio() {
         <motion.div
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: false, margin: "-100px" }}
+           viewport={{ once: true, margin: "-100px" }}
            transition={{ duration: 0.6 }}
            className="text-center mb-16"
         >
@@ -37,7 +37,7 @@ export default function Portfolio() {
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-50px" }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="relative group overflow-hidden rounded-xl aspect-[16/10] cursor-pointer"
               onClick={() => setSelectedVideo(project.video)}

@@ -12,7 +12,7 @@ export default function Services() {
         <motion.div
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: false }}
+           viewport={{ once: true }}
            transition={{ duration: 0.6 }}
            className="text-center mb-16"
         >
@@ -25,7 +25,7 @@ export default function Services() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             whileHover={{ rotateX: 5, rotateY: -5, scale: 1.02 }}
             style={{ perspective: 1000 }}
@@ -57,7 +57,7 @@ export default function Services() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+           viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             whileHover={{ rotateX: 5, rotateY: 5, scale: 1.02 }}
             style={{ perspective: 1000 }}
