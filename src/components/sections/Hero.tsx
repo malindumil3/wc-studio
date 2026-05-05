@@ -92,9 +92,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <Link href="#portfolio">
+          <Link href="#founder">
             <button className="bg-brand-orange text-white px-8 py-3 rounded-full font-bold text-sm md:text-base shadow-[0_0_20px_rgba(242,104,34,0.4)] transition-all hover:bg-brand-orange-light hover:scale-105 active:scale-95">
-              Explore Our Portfolio
+              View Profile
             </button>
           </Link>
         </motion.div>

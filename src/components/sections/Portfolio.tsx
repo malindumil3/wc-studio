@@ -88,14 +88,14 @@ export default function Portfolio() {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   return (
-    <section id="portfolio" className="pb-24 pt-4 md:pt-12 bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-4 md:pt-8">
+    <section id="portfolio" className="pb-24 pt-16 md:pt-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12">
         <motion.div
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true, margin: "-100px" }}
            transition={{ duration: 0.6 }}
-           className="text-center mb-8 md:mb-16"
+           className="text-center mb-12 md:mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Featured Projects</h2>
           <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
