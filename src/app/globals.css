@@ -30,3 +30,15 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-brand-orange);
 }
+
+/* Swiper pagination dots */
+.portfolio-swiper .swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 0.6;
+  width: 10px;
+  height: 10px;
+}
+.portfolio-swiper .swiper-pagination-bullet-active {
+  background: var(--color-brand-orange);
+  opacity: 1;
+}

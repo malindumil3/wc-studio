@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function Founder() {
   return (
-    <section id="founder" className="py-24 bg-black relative border-t border-white/5">
+    <section id="founder" className="py-10 md:py-24 bg-black relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           
           <motion.div
             initial={{ opacity: 0, x: -50 }}
