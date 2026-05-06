@@ -10,6 +10,37 @@ const videos = [
   "https://cdn.pixabay.com/video/2020/04/18/36551-412217730_large.mp4",
 ];
 
+const smoothScrollTo = (targetId: string, duration: number, callback: () => void) => {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+
+  const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+  const startPosition = window.scrollY;
+  const distance = targetPosition - startPosition;
+  let startTime: number | null = null;
+
+  function animation(currentTime: number) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+    
+    // EaseInOut Cubic
+    const ease = progress < 0.5 
+      ? 4 * progress * progress * progress 
+      : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+    window.scrollTo(0, startPosition + distance * ease);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    } else {
+      callback();
+    }
+  }
+  
+  requestAnimationFrame(animation);
+};
+
 export default function Hero() {
   const [currentVideo, setCurrentVideo] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
@@ -95,11 +126,9 @@ export default function Hero() {
           <button 
             onClick={(e) => {
               e.preventDefault();
-              const el = document.getElementById("founder");
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-              setTimeout(() => {
+              smoothScrollTo("founder", 1200, () => {
                 window.dispatchEvent(new CustomEvent('open-founder-popup'));
-              }, 400); // Wait for scroll to visually start
+              });
             }}
             className="bg-brand-orange text-white px-8 py-3 rounded-full font-bold text-sm md:text-base shadow-[0_0_20px_rgba(242,104,34,0.4)] transition-all hover:bg-brand-orange-light hover:scale-105 active:scale-95"
           >
