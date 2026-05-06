@@ -92,11 +92,19 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <Link href="#founder">
-            <button className="bg-brand-orange text-white px-8 py-3 rounded-full font-bold text-sm md:text-base shadow-[0_0_20px_rgba(242,104,34,0.4)] transition-all hover:bg-brand-orange-light hover:scale-105 active:scale-95">
-              View Profile
-            </button>
-          </Link>
+          <button 
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("founder");
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+              setTimeout(() => {
+                window.dispatchEvent(new CustomEvent('open-founder-popup'));
+              }, 400); // Wait for scroll to visually start
+            }}
+            className="bg-brand-orange text-white px-8 py-3 rounded-full font-bold text-sm md:text-base shadow-[0_0_20px_rgba(242,104,34,0.4)] transition-all hover:bg-brand-orange-light hover:scale-105 active:scale-95"
+          >
+            View Profile
+          </button>
         </motion.div>
       </div>
     </section>

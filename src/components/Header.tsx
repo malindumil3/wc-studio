@@ -8,10 +8,10 @@ import { Menu, X, Home, Image as ImageIcon, SlidersHorizontal, User, Search } fr
 import clsx from "clsx";
 
 const navLinks = [
-  { name: "Home", href: "#home", icon: Home },
-  { name: "Portfolio", href: "#portfolio", icon: ImageIcon },
-  { name: "Services", href: "#services", icon: SlidersHorizontal },
-  { name: "Founder", href: "#founder", icon: User },
+  { name: "Home", href: "/#home", icon: Home },
+  { name: "Portfolio", href: "/#portfolio", icon: ImageIcon },
+  { name: "Services", href: "/#services", icon: SlidersHorizontal },
+  { name: "Founder", href: "/#founder", icon: User },
 ];
 
 export default function Header() {

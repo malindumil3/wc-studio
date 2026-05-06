@@ -17,7 +17,7 @@ export default function Founder() {
             className="relative aspect-[4/5] w-full max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800"
+              src="/methul_asmina.jpg"
               alt="Methul Asmina - Founder"
               fill
               className="object-cover"
@@ -41,11 +41,17 @@ export default function Founder() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">The Visionary Behind the Lens</h2>
             <div className="w-16 h-1 bg-brand-orange rounded-full mb-6"></div>
             
-            <p className="text-gray-300 text-lg leading-relaxed">
-              With a profound passion for visual storytelling, Methul Asmina established WC Studio to redefine how memories are preserved. Every frame captured is not just an image or a clip, but a piece of art that conveys raw emotions and authentic experiences.
+            <p className="text-gray-300 text-lg leading-relaxed mb-4">
+              Methul Asmina is a creative professional specializing in cinematic video editing, photography, and visual storytelling. As the founder of WC Studio, he focuses on producing high-quality content that transforms everyday moments into engaging visual experiences.
+            </p>
+            <p className="text-gray-300 text-lg leading-relaxed mb-4">
+              With over five years of experience in video editing, color grading, and digital design, he has developed a strong cinematic style and attention to detail. His work includes wedding films, social media content, logo animation, and professional productions.
+            </p>
+            <p className="text-gray-300 text-lg leading-relaxed mb-4">
+              He has also been involved in television and media projects, including teledramas aired on Sirasa TV in Sri Lanka, gaining valuable industry experience and workflow knowledge.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              His cinematic approach and meticulous attention to detail ensure that whether it&apos;s a grand wedding or a high-end commercial, the final product is nothing short of a masterpiece. We believe that your story deserves a cinematic treatment.
+              Methul approaches every project with creativity and precision, ensuring visually refined results. He also works as a Fiverr freelancer, delivering quality services globally while continuing to grow WC Studio as a modern creative brand.
             </p>
             
             <div className="pt-6">

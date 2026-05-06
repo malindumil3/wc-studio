@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Facebook, Link as LinkIcon, MessageCircle, FileText, Share2, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,6 +17,12 @@ function WhatsAppIcon({ size = 20 }: { size?: number }) {
 export default function FounderAndContact() {
   const [showPopup, setShowPopup] = useState(false);
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const handleOpenPopup = () => setShowPopup(true);
+    window.addEventListener('open-founder-popup', handleOpenPopup);
+    return () => window.removeEventListener('open-founder-popup', handleOpenPopup);
+  }, []);
 
   const SHARE_URL = "https://wc-studio-tau.vercel.app/#home";
 
@@ -38,7 +44,7 @@ export default function FounderAndContact() {
             <div className="bg-white rounded-3xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 flex flex-col sm:flex-row gap-6 mt-6">
               <div className="w-full sm:w-[180px] relative aspect-square sm:aspect-auto rounded-xl overflow-hidden shrink-0">
                 <Image 
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400"
+                  src="/methul_asmina.jpg"
                   alt="Methul Asmina"
                   fill
                   className="object-cover"
@@ -48,10 +54,7 @@ export default function FounderAndContact() {
                 <span className="text-gray-500 font-semibold text-xs mb-1 uppercase tracking-wider">Founder</span>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Methul Asmina</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                  Founder Methul Asmina is a seasoned visionary and engaging storytelling, orchestrating compelling planning, and executing renowned campaigns in Sri Lanka.
-                </p>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  We intertwine disciplines of photography and direct pioneering of the studio.
+                  Methul Asmina is a creative professional specializing in cinematic video editing, photography, and visual storytelling. As the founder of WC Studio, he focuses on producing high-quality content that transforms everyday moments into engaging visual experiences.
                 </p>
                 <button
                   onClick={() => setShowPopup(true)}
@@ -134,7 +137,7 @@ export default function FounderAndContact() {
                 {/* Photo */}
                 <div className="relative w-full md:w-[280px] h-[300px] md:h-auto shrink-0 rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=600"
+                    src="/methul_asmina.jpg"
                     alt="Methul Asmina"
                     fill
                     className="object-cover"
@@ -148,16 +151,16 @@ export default function FounderAndContact() {
                     <h3 className="text-3xl font-bold text-gray-900 mt-2 mb-5">Methul Asmina</h3>
                     
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                      Founder Methul Asmina is a seasoned visionary and engaging storyteller, orchestrating compelling planning and executing renowned campaigns across Sri Lanka. His passion for cinematography started at a young age and has since evolved into a full-fledged creative studio.
+                      Methul Asmina is a creative professional specializing in cinematic video editing, photography, and visual storytelling. As the founder of WC Studio, he focuses on producing high-quality content that transforms everyday moments into engaging visual experiences.
                     </p>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                      We intertwine disciplines of photography and direct pioneering of the studio. Methul&apos;s keen eye for detail and his ability to capture raw, authentic emotions make every project a masterpiece.
+                      With over five years of experience in video editing, color grading, and digital design, he has developed a strong cinematic style and attention to detail. His work includes wedding films, social media content, logo animation, and professional productions.
                     </p>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                      With years of experience in wedding videography, commercial productions, and event coverage, WC Studio has become a trusted name in the industry.
+                      He has also been involved in television and media projects, including teledramas aired on Sirasa TV in Sri Lanka, gaining valuable industry experience and workflow knowledge.
                     </p>
                     <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                      Our mission is to capture life&apos;s most precious moments with a cinematic touch that transforms ordinary footage into extraordinary visual stories. Every frame tells a story, and every story deserves to be told beautifully.
+                      Methul approaches every project with creativity and precision, ensuring visually refined results. He also works as a Fiverr freelancer, delivering quality services globally while continuing to grow WC Studio as a modern creative brand.
                     </p>
                   </div>
 
