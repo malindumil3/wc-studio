@@ -1,8 +1,10 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/sections/Hero";
-import Portfolio from "@/components/sections/Portfolio";
-import Services from "@/components/sections/Services";
-import FounderAndContact from "@/components/sections/FounderAndContact";
-import Testimonials from "@/components/sections/Testimonials";
+
+const Portfolio = dynamic(() => import("@/components/sections/Portfolio"));
+const Services = dynamic(() => import("@/components/sections/Services"));
+const FounderAndContact = dynamic(() => import("@/components/sections/FounderAndContact"));
+const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
 
 export default function Home() {
   return (

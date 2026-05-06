@@ -80,6 +80,7 @@ export default function Hero() {
             muted
             playsInline
             preload={index === 0 ? "auto" : "none"} // Prevent loading all 3 large videos instantly
+            style={{ willChange: "opacity" }}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${index === currentVideo ? "opacity-100 z-10" : "opacity-0 z-0"
               }`}
           />
