@@ -77,9 +77,14 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} WC Studio. All Rights Reserved.
-        </p>
+        <div className="flex flex-col gap-1">
+          <p className="text-gray-400 font-medium text-sm">
+            Designed by <span className="font-semibold tracking-wide text-gray-300">A. Malindu Milakshana</span>
+          </p>
+          <p className="text-gray-500 text-xs sm:text-sm">
+            &copy; {new Date().getFullYear()} WC Studio. All Rights Reserved.
+          </p>
+        </div>
 
         <motion.button
           whileHover={{ y: -5 }}
